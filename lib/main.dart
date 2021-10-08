@@ -19,14 +19,29 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.deepPurple,
-        title: Text(
-          'Flutter App',
-          style: TextStyle(
-              color: Colors.blue, fontWeight: FontWeight.bold, fontSize: 50),
+          leading: IconButton(
+            icon: Icon(Icons.dehaze),
+            onPressed: () {},
+          ),
+          backgroundColor: Colors.blue,
+          title: Text(
+            'Hello Appbar',
+            style: TextStyle(
+                color: Colors.blue.shade50, fontWeight: FontWeight.bold),
+          ),
+          actions: [
+            Icon(Icons.search, color: Colors.black),
+            Icon(Icons.more_vert, color: Colors.black)
+          ]),
+      body: Container(
+        color: Colors.lightBlue,
+        margin: EdgeInsets.fromLTRB(50.0, 50.0, 50.0, 50.0),
+        padding: EdgeInsets.all(30),
+        child: Icon(
+          Icons.emoji_events,
+          color: Colors.orange,
+          size: 100.78,
         ),
-        actions: [Icon(Icons.account_circle), Icon(Icons.access_alarm)],
-        centerTitle: true,
       ),
     );
   }
